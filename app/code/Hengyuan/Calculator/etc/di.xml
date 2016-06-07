@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Hengyuan\Calculator\Model\Basic">
+        <!--<plugin name="Hengyuan_Calculator_before" type="Hengyuan\Calculator\Plugin\Before" sortOrder="1" />-->
+        <!--<plugin name="Hengyuan_Calculator::after" type="Hengyuan\Calculator\Plugin\After" sortOrder="2" />-->
+        <plugin name="Hengyuan_Calculator::around" type="Hengyuan\Calculator\Plugin\Around" sortOrder="3" />
+    </type>
+    <preference for="Hengyuan\Calculator\Model\Basic" type="Hengyuan\Calculator\Model\Advanced" />
+</config>
